@@ -18,3 +18,6 @@ else()
 	add_library(FluxCore STATIC ${FLUX_CORE_SOURCE})
 	target_compile_definitions(FluxCore PUBLIC FLUX_CORE_API=)
 endif()
+
+add_subdirectory("external/entt")
+target_link_libraries(FluxCore PUBLIC EnTT)

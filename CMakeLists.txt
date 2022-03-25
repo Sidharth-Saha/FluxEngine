@@ -11,13 +11,13 @@ option(FLUX_SHARED_LIBS "Build the engine using shared libraries" ON)
 
 set(FLUX_SOURCE_DIR "Source")
 
-set(FLUX_CORE_SOURCE "Source/Core/Engine/Engine.cpp")
+set(FLUX_CORE_SOURCE_FILES "Source/Core/Engine/Engine.cpp")
 
 if(FLUX_SHARED_LIBS)
-	add_library(FluxCore SHARED ${FLUX_CORE_SOURCE})
+	add_library(FluxCore SHARED ${FLUX_CORE_SOURCE_FILES})
 	target_compile_definitions(FluxCore PRIVATE FLUX_CORE_API=${DLL_EXPORT} INTERFACE FLUX_CORE_API=${DLL_IMPORT})
 else()
-	add_library(FluxCore STATIC ${FLUX_CORE_SOURCE})
+	add_library(FluxCore STATIC ${FLUX_CORE_SOURCE_FILES})
 	target_compile_definitions(FluxCore PUBLIC FLUX_CORE_API=)
 endif()
 

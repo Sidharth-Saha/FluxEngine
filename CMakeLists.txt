@@ -9,6 +9,8 @@ endif()
 
 option(FLUX_SHARED_LIBS "Build the engine using shared libraries" ON)
 
+set(FLUX_SOURCE_DIR "Source")
+
 set(FLUX_CORE_SOURCE "Source/Core/Engine/Engine.cpp")
 
 if(FLUX_SHARED_LIBS)

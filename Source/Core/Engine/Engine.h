@@ -8,6 +8,6 @@ namespace Flux
 	public:
 		virtual ~Engine();
 
-		virtual int Run(int argc, char** argv);
+		virtual int Run(int argc, char** argv) = 0;
 	};
 }

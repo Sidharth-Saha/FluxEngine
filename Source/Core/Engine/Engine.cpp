@@ -6,9 +6,4 @@ namespace Flux
 	{
 
 	}
-
-	int Engine::Run(int argc, char** argv)
-	{
-
-	}
 }

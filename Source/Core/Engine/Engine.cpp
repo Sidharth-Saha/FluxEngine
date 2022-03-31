@@ -6,4 +6,11 @@ namespace Flux
 	{
 
 	}
+
+	int Engine::Run(int argc, char** argv)
+	{
+		Init();
+		Loop();
+		Shutdown();
+	}
 }

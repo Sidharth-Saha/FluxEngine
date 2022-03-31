@@ -2,6 +2,11 @@
 
 namespace Flux
 {
+	Engine::~Engine()
+	{
+
+	}
+
 	int Engine::Run(int argc, char** argv)
 	{
 

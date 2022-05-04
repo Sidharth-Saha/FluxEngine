@@ -30,3 +30,6 @@ target_link_libraries(FluxCore PRIVATE EnTT::EnTT)
 
 find_package(SDL2 CONFIG REQUIRED)
 target_link_libraries(FluxCore PRIVATE SDL2::SDL2 SDL2::SDL2main)
+
+find_path(VULKAN_HPP_INCLUDE_DIRS "vulkan/vulkan.hpp")
+target_link_libraries(FluxCore PRIVATE ${VULKAN_HPP_INCLUDE_DIRS})

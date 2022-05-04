@@ -27,3 +27,6 @@ target_include_directories(FluxCore PUBLIC ${FLUX_CORE_SOURCE_DIR})
 
 find_package(EnTT CONFIG REQUIRED)
 target_link_libraries(FluxCore PRIVATE EnTT::EnTT)
+
+find_package(SDL2 CONFIG REQUIRED)
+target_link_libraries(FluxCore PRIVATE SDL2::SDL2 SDL2::SDL2main)

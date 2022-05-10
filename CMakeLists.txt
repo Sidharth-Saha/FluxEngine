@@ -12,8 +12,8 @@ option(FLUX_SHARED_LIBS "Build the engine using shared libraries" ON)
 set(FLUX_SOURCE_DIR "Source")
 
 set(FLUX_CORE_SOURCE_FILES 
-	"Source/Core/Engine/Engine.cpp"
-	"Source/Core/Game/World.cpp")
+	"Source/Core/Engine.cpp"
+	"Source/Core/World.cpp")
 
 if(FLUX_SHARED_LIBS)
 	add_library(FluxCore SHARED ${FLUX_CORE_SOURCE_FILES})

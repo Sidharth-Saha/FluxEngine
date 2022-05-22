@@ -1,4 +1,7 @@
 #pragma once
+#include <SDL2/SDL.h>
+
+#include <cstdint>
 
 namespace Flux
 {
@@ -11,8 +14,17 @@ namespace Flux
 		virtual int Run(int argc, char** argv);
 
 	protected:
-		virtual void Init() = 0;
-		virtual void Shutdown() = 0;
-		virtual void Loop() = 0;
+		SDL_Window* m_Window;
+		const char* m_WindowTitle;
+		int m_WindowWidth;
+		int m_WindowHeight;
+		uint32_t m_WindowFlags;
+
+		virtual void Init();
+		virtual void Shutdown();
+
+		virtual void Loop();
+
+		void CreateWindow();
 	};
 }

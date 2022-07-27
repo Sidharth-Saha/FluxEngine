@@ -13,6 +13,7 @@ set(FLUX_CORE_SOURCE "Source/Core/GameFramework/World.cpp")
 
 add_executable(FluxEngine ${FLUX_SOURCE})
 target_include_directories(FluxEngine PRIVATE ${FLUX_INCLUDE_PATHS})
+target_link_libraries(FluxEngine PRIVATE FluxCore)
 
 if(FLUX_SHARED_LIBS)
 	add_library(FluxCore SHARED ${FLUX_CORE_SOURCE})
@@ -23,5 +24,3 @@ else()
 	target_compile_definitions(FluxCore PUBLIC FLUX_CORE_API=)
 endif()
 target_include_directories(FluxCore PRIVATE ${FLUX_INCLUDE_PATHS})
-
-target_link_libraries(FluxEngine PRIVATE FluxCore)

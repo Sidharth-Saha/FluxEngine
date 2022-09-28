@@ -7,3 +7,6 @@ add_library(FluxRuntime
 )
 target_include_directories(FluxRuntime PUBLIC "Source")
 target_compile_definitions(FluxRuntime PUBLIC FLUX_API=)
+target_link_libraries(FluxRuntime PRIVATE EnTT::EnTT)
+
+find_package(Entt CONFIG REQUIRED)

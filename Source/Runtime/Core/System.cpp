@@ -5,4 +5,6 @@ namespace Flux
 	System::~System() {}
 
 	void System::Update(entt::registry& registry, float deltaSeconds) {}
+
+	void System::WaitForUpdate() {}
 }

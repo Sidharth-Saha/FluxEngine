@@ -9,4 +9,12 @@ namespace Flux
 			system->Update(registry, deltaSeconds);
 		}
 	}
+
+	void SystemPipelineStage::WaitForUpdate()
+	{
+		for (auto system : m_Systems)
+		{
+			system->WaitForUpdate();
+		}
+	}
 }

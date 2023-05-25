@@ -8,6 +8,7 @@ add_library(FluxRuntime
 	"Source/Runtime/Core/System.cpp"
 	"Source/Runtime/Core/SystemPipeline.cpp"
 	"Source/Runtime/Core/SystemPipelineStage.cpp"
+	"Source/Runtime/Multithreading/WorkerThread.cpp"
 )
 target_include_directories(FluxRuntime PUBLIC "Source")
 target_compile_definitions(FluxRuntime PUBLIC FLUX_API=)

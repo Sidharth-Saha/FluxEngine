@@ -1,3 +1,15 @@
 cmake_minimum_required(VERSION 3.0)
 
 project(FluxEngine)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+
+set(FLUX_SOURCE_DIR "Source")
+set(FLUX_INCLUDE_DIR "Source")
+
+set(FLUX_RUNTIME_SOURCE_DIR "${FLUX_SOURCE_DIR}/Runtime")
+
+file(GLOB_RECURSE FLUX_RUNTIME_SOURCE "${FLUX_RUNTIME_SOURCE_DIR}/*.cpp")
+
+add_library(FluxRuntime STATIC ${FLUX_RUNTIME_SOURCE})
